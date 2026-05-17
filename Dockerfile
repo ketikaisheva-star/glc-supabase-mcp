@@ -16,4 +16,4 @@ EXPOSE 8080
 
 # mcp-proxy starts an HTTP/SSE bridge and proxies stdio to the Supabase MCP server.
 # SUPABASE_ACCESS_TOKEN must be set as an env var on the Railway service.
-CMD ["sh", "-c", "mcp-proxy --port ${PORT} --sse-path /sse --message-path /message -- npx -y @supabase/mcp-server-supabase --access-token ${SUPABASE_ACCESS_TOKEN} --read-only=false"]
+CMD ["sh", "-c", "mcp-proxy --port ${PORT} --sse-path /sse --message-path /message -- npx -y @supabase/mcp-server-supabase --access-token ${SUPABASE_ACCESS_TOKEN}"]
